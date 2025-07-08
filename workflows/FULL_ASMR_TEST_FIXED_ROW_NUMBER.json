@@ -1,0 +1,26 @@
+{
+  "name": "FULL ASMR TEST - FIXED ROW NUMBER",
+  "description": "Fixed N8N Google Sheets row positioning issue by correcting row_number schema type from 'string' to 'number' in all Google Sheets nodes. Applied PR #16632 fix.",
+  "workflow_id": "LPdk1oRiQAYEYURR",
+  "fixed_date": "2025-07-08T20:17:17.096Z",
+  "fixes_applied": [
+    "Changed row_number schema type from 'string' to 'number' in Update Sheet with Prompts node",
+    "Changed row_number schema type from 'string' to 'number' in Final Sheet Update node", 
+    "Changed row_number schema type from 'string' to 'number' in Final Video Update node",
+    "Preserved row_number logic across all workflow nodes",
+    "Applied N8N PR #16632 fix for Google Sheets row_number type handling"
+  ],
+  "problem_solved": "Data was being written to wrong rows (previous row instead of pending row) due to incorrect row_number type handling",
+  "research_sources": [
+    "GitHub PR #16632: Fix row_number type handling in Google Sheets nodes",
+    "N8N Community discussions on Google Sheets row positioning",
+    "Official N8N documentation on Google Sheets integration",
+    "Perplexity research on N8N Google Sheets best practices"
+  ],
+  "validation_status": "PASSED - Workflow validated successfully with 0 errors",
+  "test_environment": {
+    "sheet_id": "1uJo20tV9vxQUMZuaHrPCIb1ayjzqk7z1ISELCH0kDHI",
+    "test_mode": true,
+    "mock_videos_enabled": true
+  }
+}
