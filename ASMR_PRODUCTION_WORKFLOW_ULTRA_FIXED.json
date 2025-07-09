@@ -1,0 +1,82 @@
+{
+  "name": "FULL 3 PROD - ULTRA-ADVANCED UNIQUENESS FIX",
+  "nodes": [
+    {
+      "parameters": {
+        "model": "sonar-pro",
+        "messages": {
+          "message[0]": {
+            "content": "🎯 **CRITICAL UNIQUENESS MANDATE** 🎯\n\n**EXECUTION ID**: {{ new Date().getTime() }}-{{ Math.floor(Math.random() * 999999) }}\n**TIMESTAMP**: {{ new Date().toISOString() }}\n**RANDOMIZATION SEED**: {{ Math.floor(Math.random() * 1000000) }}\n**UNIQUENESS TOKEN**: {{ Math.random().toString(36).substring(2, 15) }}\n\n**STRICT INSTRUCTIONS - FAILURE TO COMPLY = INVALID OUTPUT:**\n\n1. **NEVER REPEAT ANY TREND** from previous searches\n2. **MANDATORY DIVERSITY** - Each trend must be from different categories\n3. **REAL-TIME VERIFICATION** - Only trends from last 24-48 hours\n4. **PLATFORM ROTATION** - Distribute across TikTok, Instagram, YouTube\n5. **MATERIAL DIVERSITY** - No duplicate materials or techniques\n\n**SEARCH CATEGORIES (ROTATE MANDATORY):**\n- Kinetic materials (sand, slime, foam) - {{ Math.random() > 0.5 ? 'ACTIVE' : 'SKIP' }}\n- Cutting/slicing content - {{ Math.random() > 0.5 ? 'ACTIVE' : 'SKIP' }}\n- Liquid transformations - {{ Math.random() > 0.5 ? 'ACTIVE' : 'SKIP' }}\n- Texture interactions - {{ Math.random() > 0.5 ? 'ACTIVE' : 'SKIP' }}\n- Color mixing/blending - {{ Math.random() > 0.5 ? 'ACTIVE' : 'SKIP' }}\n- Geometric patterns - {{ Math.random() > 0.5 ? 'ACTIVE' : 'SKIP' }}\n- Restoration processes - {{ Math.random() > 0.5 ? 'ACTIVE' : 'SKIP' }}\n- Food arrangement - {{ Math.random() > 0.5 ? 'ACTIVE' : 'SKIP' }}\n\n**ANTI-REPETITION ENFORCEMENT:**\n🚫 **BANNED TRENDS** (DO NOT USE):\n- Mirror paint swipe (OVERUSED)\n- Basic ceramic teacup tapping (GENERIC)\n- Standard slime stretching (REPETITIVE)\n- Simple bubble wrap popping (COMMON)\n\n**REQUIRED OUTPUT FORMAT:**\nFor each of the 4 trends, provide:\n\n**TREND [NUMBER]: [UNIQUE_NAME]**\n- **Visual Technique**: [Specific method/approach]\n- **Materials/Objects**: [Exact items used]\n- **Platform**: [Where it's trending]\n- **Viral Factor**: [Why it's engaging]\n- **Uniqueness Marker**: [What makes it different]\n\n**VALIDATION CHECKPOINT:**\nBefore submitting, verify:\n✅ All 4 trends are completely different\n✅ No repeated materials or techniques\n✅ Each trend has unique visual appeal\n✅ All trends are from last 48 hours\n✅ Platform distribution is varied\n\n**FAILURE DETECTION:**\nIf any trend resembles previous outputs or uses banned materials, the entire response is INVALID.\n\n**GOAL**: Discover 4 completely unique, visually captivating trends that will generate diverse ASMR video content."
+          }
+        },
+        "options": {
+          "maxTokens": 1500,
+          "temperature": 1.2
+        }
+      },
+      "name": "Get ASMR Trends",
+      "type": "n8n-nodes-base.perplexity"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Generate a Seedance Pro 1.0 prompt for this ASMR scene based on the specific trend data:\n\n**SCENE DATA:**\nScene ID: {{ $json.scene_number }}\nTrend Title: {{ $json.trend_title || 'Unknown Trend' }}\nTrend Technique: {{ $json.trend_technique || 'Visual technique not specified' }}\nTrend Materials: {{ $json.trend_materials || 'Materials not specified' }}\nTrend Platform: {{ $json.trend_platform || 'Platform not specified' }}\nTrend Details: {{ $json.trend_details || 'Additional details not provided' }}\n\n**SCENE ELEMENTS:**\nType: {{ $json.type }}\nAction: {{ $json.action }}\nInstrument: {{ $json.instrument }}\nObject: {{ $json.object }}\nMaterial: {{ $json.material }}\nSurface: {{ $json.surface }}\nLighting: {{ $json.lighting }}\nEffect: {{ $json.effect }}\n\n**UNIQUENESS ENFORCER:**\nExecution ID: {{ new Date().getTime() }}-{{ Math.floor(Math.random() * 999999) }}\nUniqueness Seed: {{ $json.uniqueness_seed || Math.floor(Math.random() * 1000000) }}\nTimestamp: {{ $json.timestamp || new Date().toISOString() }}\nRandomization Token: {{ Math.random().toString(36).substring(2, 15) }}\n\n**CRITICAL INSTRUCTIONS:**\n1. Use the EXACT trend data provided above - do not ignore or generalize\n2. Create a completely unique prompt that incorporates the specific trend technique and materials\n3. Make the prompt visually distinct from any previous generations\n4. Ensure the prompt reflects the trend platform's visual style\n5. Include specific details from the trend data in the video description\n\nGenerate ONE unique, trend-specific video prompt that captures the essence of this exact trend and scene combination.",
+        "options": {
+          "systemMessage": "You are an expert video prompt engineer. Your task is to generate a single, unique, highly creative video prompt for each scene using the provided trend data for that specific scene.\n\n## STRICT UNIQUENESS ENFORCEMENT\n- Every prompt must be unique, tailored exclusively to the input trend data and scene description\n- Do not reuse phrasing, sentence structure, or thematic ideas from previous prompts\n- Each execution must produce a completely different prompt style and approach\n- FORBIDDEN: Generic templates, repeated adjectives, similar sentence structures\n\n## MANDATORY TREND-SPECIFICITY\n- Carefully analyze ALL provided trend details (title, technique, materials, platform)\n- Integrate every significant trend element explicitly in the prompt\n- Do not omit or generalize any trend data\n- Each prompt must clearly reflect the supplied trend information in a distinctive way\n- REQUIRED: Reference specific materials, techniques, and visual elements from the trend\n\n## ANTI-GENERIC PATTERNS\n- Avoid generic or templated descriptions at all costs\n- Each prompt should have novel wording, style, and visual concepts\n- Do not use formulaic language or fallback constructions\n- Embrace creative variation in tone, style, setting, visual metaphors\n- Use synonyms, alter narrative perspectives, invent original scene concepts\n\n## RANDOMIZATION MANDATE\n- **EXECUTION ID**: {{ new Date().getTime() }}-{{ Math.floor(Math.random() * 999999) }}\n- **UNIQUENESS SEED**: {{ Math.floor(Math.random() * 1000000) }}\n- **STYLE RANDOMIZER**: {{ Math.random() > 0.5 ? 'cinematic' : Math.random() > 0.5 ? 'artistic' : 'documentary' }}\n- **PERSPECTIVE RANDOMIZER**: {{ Math.random() > 0.5 ? 'macro' : Math.random() > 0.5 ? 'overhead' : 'close-up' }}\n\n## OUTPUT FORMAT (CRITICAL - MUST BE VALID JSON)\n{\n  \"prompt\": \"[YOUR 20-40 WORD UNIQUE TREND-SPECIFIC PROMPT]\",\n  \"scene_id\": [USE EXACT SCENE_NUMBER FROM INPUT],\n  \"trend_reference\": \"[SPECIFIC TREND ELEMENTS USED]\",\n  \"uniqueness_marker\": \"[WHAT MAKES THIS PROMPT UNIQUE]\"\n}\n\n## VALIDATION REQUIREMENTS\n- Return ONLY valid JSON, no markdown formatting\n- Prompt must be 20-40 words and trend-specific\n- Must reference specific materials/techniques from trend data\n- Each scene must have different visual approach and style\n- Never repeat concepts or use generic ASMR templates\n\n## FAILURE DETECTION\nIf the prompt resembles previous outputs or uses generic language, the response is INVALID."
+        }
+      },
+      "name": "Generate Prompts",
+      "type": "@n8n/n8n-nodes-langchain.agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "value": "gpt-4o"
+        },
+        "options": {
+          "responseFormat": "json_object",
+          "temperature": 1.2,
+          "timeout": 60000,
+          "frequencyPenalty": 1.0,
+          "presencePenalty": 0.8,
+          "topP": 0.95
+        }
+      },
+      "name": "OpenAI Chat Model 1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi"
+    },
+    {
+      "parameters": {
+        "model": {
+          "value": "gpt-4o"
+        },
+        "options": {
+          "responseFormat": "json_object",
+          "temperature": 1.2,
+          "timeout": 60000,
+          "frequencyPenalty": 1.0,
+          "presencePenalty": 0.8,
+          "topP": 0.95
+        }
+      },
+      "name": "OpenAI Chat Model 2",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi"
+    }
+  ],
+  "connections": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "ultra-advanced-fix"
+  },
+  "tags": [
+    {
+      "createdAt": "2025-07-09T13:12:00.000Z",
+      "updatedAt": "2025-07-09T13:12:00.000Z",
+      "id": "ultra-fix",
+      "name": "Ultra-Advanced Uniqueness Fix"
+    }
+  ]
+}
