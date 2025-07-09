@@ -1,0 +1,13 @@
+{
+  "name": "FULL 3 PROD - FIXED TREND EXTRACTION",
+  "description": "CRITICAL FIX: Enhanced Perplexity prompts and improved trend data extraction for ASMR workflow",
+  "fixes": [
+    "Perplexity prompt enhanced with detailed description requirements",
+    "Improved regex for materials and technique extraction",
+    "Forced trend data usage in AI agents",
+    "Cleaned markdown formatting from extracted data",
+    "Enhanced error handling and fallback mechanisms"
+  ],
+  "timestamp": "2025-07-09T16:00:15Z",
+  "workflowId": "L7uGm8I9xgko1wTI"
+}
