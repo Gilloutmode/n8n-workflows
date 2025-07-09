@@ -1,0 +1,51 @@
+{
+  "name": "ASMR PROD - FINAL CORRECTED VERSION",
+  "description": "Corrections appliquées SOIGNEUSEMENT en suivant les user guidelines complètes",
+  "fixes": [
+    "✅ Prompt Perplexity enrichi avec descriptions détaillées pour AI video generation",
+    "✅ Ajout des sections ASMR Elements et Video Description pour meilleure génération",
+    "✅ Suppression COMPLÈTE des fallbacks hardcodés 'ceramic teacup tapping'",
+    "✅ Workflow échoue proprement si pas de trend data valide (fail-safe strategy)",
+    "✅ Forçage de l'utilisation EXCLUSIVE des données de trends Perplexity",
+    "✅ Aucun prompt générique ne peut plus s'exécuter"
+  ],
+  "critical_changes": {
+    "Get ASMR Trends": {
+      "before": "Descriptions basiques pour trends",
+      "after": "Descriptions détaillées avec ASMR Elements, Video Description, minimum 2-3 phrases par section"
+    },
+    "Prepare Initial Update": {
+      "before": "Fallback hardcodé 'Macro close-up ASMR ceramic teacup tapping'",
+      "after": "AUCUN fallback - workflow échoue si pas de trend data valide"
+    },
+    "Error Strategy": {
+      "before": "Utilise prompts génériques en cas d'erreur",
+      "after": "Workflow échoue complètement plutôt que d'utiliser des prompts génériques"
+    }
+  },
+  "safety_measures": [
+    "Modifications ciblées uniquement sur 2 nodes problématiques",
+    "Structure du workflow préservée à 100%",
+    "Connexions et AI agents intacts",
+    "Pas de suppression de nodes existants",
+    "Corrections appliquées via update partiel sécurisé",
+    "Suivi des best practices Perplexity pour modifications N8N"
+  ],
+  "user_guidelines_followed": [
+    "Phase 0: Analyse mémoire et recherche de solutions précédentes",
+    "Phase 1: Recherche GitHub pour exemples de workflows N8N",
+    "Phase 2: Documentation Context7 pour best practices N8N",
+    "Phase 3: Recherche Perplexity pour méthodes sécurisées de modification",
+    "Phase 4: Implémentation via MCP N8N avec modifications ciblées"
+  ],
+  "validation": {
+    "workflow_structure": "100% préservée",
+    "connections": "Toutes intactes",
+    "ai_agents": "Configurations inchangées",
+    "hardcoded_fallbacks": "Complètement supprimés",
+    "trend_data_usage": "Forcé et exclusif"
+  },
+  "timestamp": "2025-07-09T16:17:45Z",
+  "workflowId": "vhWhzTTTVpILSEgV",
+  "version": "6.0-final-corrected-safe"
+}
