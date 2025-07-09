@@ -1,0 +1,20 @@
+{
+  "name": "FULL 3 PROD - NO HARDCODED FALLBACKS",
+  "description": "CRITICAL FIX: Complete removal of all hardcoded 'ceramic teacup tapping' fallbacks",
+  "fixes": [
+    "REMOVED all hardcoded 'ceramic teacup tapping' prompts from Format Perplexity Data node",
+    "REMOVED all hardcoded fallbacks from Prepare Initial Update node", 
+    "FORCED workflow to fail if no valid trend data is available",
+    "Enhanced error handling to prevent generic prompt generation",
+    "Workflow now ONLY uses Perplexity trend data or fails completely",
+    "No more generic fallbacks that override trend-based prompts"
+  ],
+  "critical_changes": {
+    "Format Perplexity Data": "Removed hardcoded fallback trends, forces error if no Perplexity trends",
+    "Prepare Initial Update": "Removed all 'ceramic teacup' fallbacks, forces error if trend data invalid",
+    "Error Strategy": "Workflow fails completely rather than using generic prompts"
+  },
+  "timestamp": "2025-07-09T16:04:45Z",
+  "workflowId": "L7uGm8I9xgko1wTI",
+  "version": "5.0-no-hardcoded-fallbacks"
+}
