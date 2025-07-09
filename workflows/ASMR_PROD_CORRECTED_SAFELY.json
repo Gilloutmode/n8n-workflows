@@ -1,0 +1,28 @@
+{
+  "name": "ASMR PROD - SAFELY CORRECTED",
+  "description": "Corrections appliquées SOIGNEUSEMENT sans casser le workflow",
+  "fixes": [
+    "✅ Prompt Perplexity amélioré avec descriptions détaillées pour AI agents",
+    "✅ Extraction des matériaux améliorée avec regex multi-lignes",
+    "✅ Suppression des fallbacks hardcodés 'ceramic teacup tapping'",
+    "✅ Forçage de l'utilisation des données de trends uniquement",
+    "✅ Workflow échoue proprement si pas de trend data valide",
+    "✅ Aucun prompt générique ne peut plus s'exécuter"
+  ],
+  "critical_changes": {
+    "Get ASMR Trends": "Prompt enrichi avec descriptions détaillées pour AI video generation",
+    "Format Perplexity Data": "Regex améliorés pour extraction multi-lignes des matériaux",
+    "Prepare Initial Update": "Suppression complète des fallbacks hardcodés - échec si pas de trends",
+    "Error Strategy": "Workflow échoue complètement plutôt que d'utiliser des prompts génériques"
+  },
+  "safety_measures": [
+    "Modifications ciblées uniquement sur les nodes problématiques",
+    "Structure du workflow préservée à 100%",
+    "Connexions et AI agents intacts",
+    "Pas de suppression de nodes existants",
+    "Corrections appliquées via update partiel"
+  ],
+  "timestamp": "2025-07-09T16:09:30Z",
+  "workflowId": "XuctHtSDiCDCEsLq",
+  "version": "5.1-safely-corrected"
+}
